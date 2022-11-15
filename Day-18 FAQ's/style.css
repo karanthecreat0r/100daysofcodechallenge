@@ -1,0 +1,116 @@
+/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Lato&d&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(224, 234, 255);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+}
+
+h1{
+    margin: 50px 0 30px;
+    text-align: center;
+}
+
+.faq-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.faq { 
+    background-color: transparent;
+    border: 1px solid rgb(255, 239, 219);
+    border-radius: 10px;
+    margin: 20px 0;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3 ease;
+}
+
+.faq.active {
+    background-color: white;
+    box-shadow: 0 3px 6px rgba(0, 0, 0,0.1), 3px 6px rgba(0, 0, 0,0.1);
+}
+
+.faq.active::before,
+.faq.active::after {
+    content: '\f16d';
+    font-family: "Font Awesome 6 brands"; 
+    color:rgb(255, 152, 152);
+    font-size: 4rem;
+    position: absolute;
+    opacity: 0.2;
+    top: 20px;
+    left: 45px;
+    z-index: 0;
+
+    
+}
+
+.faq.active::before {
+    color: rgb(107, 126, 126);
+    top: -10px;
+    left: -5px;
+    transform: rotateY(180deg);
+}
+
+.fa-title {
+    margin: 0 35px 0 0;
+}
+
+.faq-text {
+    display: none;
+    margin: 30px 0 0;
+}
+
+.faq.active .faq-text {
+    display: block;
+}
+
+.faq-toggle {
+    background-color: transparent;
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    padding: 0;
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    height: 30px;
+    width: 30px;
+}
+
+.faq-toggle:focus {
+    outline: 0;
+}
+
+
+.faq-toggle .fa-times {
+    display: none;
+}
+
+.faq.active .faq-toggle .fa-times {
+    color:tomato;
+    display: block;
+}
+
+.faq.active .faq-toggle .fa-chevron-down {
+    display: none;
+}
+
+.faq.active .faq-toggle {
+    background-color: blanchedalmond;
+
+}
