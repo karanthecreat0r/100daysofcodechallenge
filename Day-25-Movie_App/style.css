@@ -1,0 +1,124 @@
+/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=popins&d&display=swap');
+
+
+:root{
+    --primary-color:rgb(0, 43, 99);
+    --secondary-color:rgb(7, 103, 228);
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'popins', sans-serif;
+    background-image: linear-gradient(
+        to bottom, 
+        #0066ff , 
+        #0044aa , 
+        #00408a ,
+        #002549 );
+    margin: 0;
+    
+}
+
+header{
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    background-color: var(--secondary-color);
+}
+
+header h1 {
+    color: #fff;
+    position: absolute;
+    size: 10rem;
+    padding-right: 50%;
+    
+}
+
+.search {
+    background-color: transparent;
+    border: 4px solid #fff;
+    border-radius: 50px;
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    color: white;
+
+}
+
+.search::focus {
+    outline: none;
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movie {
+    width: 300px;
+    margin: 1rem;
+    background-color: #003481;
+    box-shadow: 0 4px 5px rgb(251, 252, 255);
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+}
+.movie img {
+    width: 100%;
+}
+
+.movie-info {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: .5px;
+
+}
+
+.movie-info h3 {
+    margin-top: 0;
+}
+
+.movie-info span {
+    background-color: var(--primary-color);
+    padding: .25rem 0.5rem;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.movie-info span.blue {
+    color: rgb(255, 255, 255);
+}
+
+.movie-info span.green{
+    color: rgb(41, 255, 166);
+}
+
+.movie-info span.red {
+    color: red;
+}
+
+.overview {
+    background-color: white;
+    padding: 0.5rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    max-height: 100%;
+    transform: translateY(101%);
+    transition: transform 0.3s ease-in;
+}
+
+.movie:hover .overview{
+    transform: translateY(0);
+}
