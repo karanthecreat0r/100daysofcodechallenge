@@ -1,4 +1,4 @@
-You've built an inflight entertainment system with on-demand movie streaming.
+we've built an inflight entertainment system with on-demand movie streaming.
 
 Users on longer flights like to start a second movie right when their first one ends, but they complain that the plane usually lands before they can see the ending. So you're building a feature for choosing two movies whose total runtimes will equal the exact flight length.
 
